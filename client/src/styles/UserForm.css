@@ -40,10 +40,22 @@
   margin-top: 20px;
 }
 
-.input-group input {
+.error {
+  border: 1px solid red;
+}
+
+.input-group select {
   width: 25%;
   height: 35px;
   padding-top: 10px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .form-group input {
@@ -113,6 +125,29 @@ button {
   width: 600px;
 }
 
-button:hover {
-  background-color: #0056b3;
+@media screen and (max-width: 768px) {
+  .form-group input[name="firstName"],
+  .form-group input[name="lastName"],
+  .form-group input[name="email"],
+  .form-group input[name="phone"],
+  .input-group select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .input-group select {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .form-group input,
+  input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .dob-container {
+    max-width: none;
+  }
 }

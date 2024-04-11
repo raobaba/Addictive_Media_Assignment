@@ -22,22 +22,24 @@ function AddressForm() {
   return (
     <div className='address-form-container'>
       <form action='' onSubmit={handleSubmit}>
-      <h2>Enter Your Personal Details</h2>
-        {addresses.map((address) => (
-          <div key={address.id}>
-            <label>Previous Address {address.id}</label>
-            <div className='input-address'>
-              <input type='text' name={`address${address.id}_1`} placeholder='Address line 1' />
-              <input type='text' name={`address${address.id}_2`} placeholder='Address line 2' />
-              <input type='text' name={`address${address.id}_3`} placeholder='Address line 3' />
+        <h2>Enter Your Personal Details</h2>
+        <div className="scrollable-content">
+          {addresses.map((address) => (
+            <div key={address.id}>
+              <label>Previous Address {address.id}</label>
+              <div className='input-address'>
+                <input type='text' name={`address${address.id}_1`} placeholder='Address line 1' required />
+                <input type='text' name={`address${address.id}_2`} placeholder='Address line 2' required/>
+                <input type='text' name={`address${address.id}_3`} placeholder='Address line 3' required/>
+              </div>
+              {addresses.length > 1 && (
+                <Link to='#' className='remove' onClick={() => handleRemoveAddress(address.id)}>
+                  Remove Address
+                </Link>
+              )}
             </div>
-            {addresses.length > 1 && (
-              <Link to='#' className='remove' onClick={() => handleRemoveAddress(address.id)}>
-                Remove Address
-              </Link>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
         <div className='address-button'>
           <button type='submit'>Submit</button>
           <Link to='#' onClick={handleAddAddress}>Add Another Address</Link>
