@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const Connection = require("./config/db.js");
 const userFormRouter = require('./routes/userForm.route.js')
+const addressRouter = require('./routes/addressForm.route.js')
 const app = express();
 
 app.use(express.static("public"));
@@ -13,7 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 Connection();
-app.use('/api/v1',userFormRouter)
+app.use('/api/v1',userFormRouter);
+app.use('/api/v1',addressRouter)
 
 app.get("/", (req, res) => {
   res.send("Server is Running! 🚀");
