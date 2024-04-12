@@ -1,4 +1,4 @@
-const ClientInfo = require('../models/clientInfo.model');
+const ClientInfo = require("../models/clientInfo.model");
 
 exports.saveClientInfo = async (req, res) => {
   try {
@@ -7,10 +7,10 @@ exports.saveClientInfo = async (req, res) => {
       ip,
       deviceType,
       browser,
-      userAgent
+      userAgent,
     });
     await clientInfo.save();
-    res.status(201).json({ message: 'Client information saved successfully' });
+    res.status(201).json({ message: "Client information saved successfully" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

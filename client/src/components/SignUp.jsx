@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function SignUp() {
   return (
     <div>
-        <h1 style={{textAlign:'center'}}>Under Construction</h1>
+      <h1 style={{ textAlign: "center" }}>Under Construction</h1>
     </div>
-  )
+  );
 }
 
-export default SignUp
+export default SignUp;

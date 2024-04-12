@@ -38,7 +38,7 @@ function UserForm() {
 
   const highlightFields = () => {
     const fields = document.querySelectorAll(".form-group input[required]");
-    console.log(fields)
+    console.log(fields);
     fields.forEach((field) => {
       if (!field.value) {
         field.classList.add("error");
@@ -46,9 +46,9 @@ function UserForm() {
         field.classList.remove("error");
       }
     });
-  
+
     const dobSelects = document.querySelectorAll(".dob-container select");
-    console.log(dobSelects)
+    console.log(dobSelects);
     dobSelects.forEach((select) => {
       if (!select.value) {
         select.classList.add("error");
@@ -56,9 +56,8 @@ function UserForm() {
         select.classList.remove("error");
       }
     });
-    
   };
-  
+
   return (
     <div className="user-form-container">
       <form onSubmit={handleSubmit}>

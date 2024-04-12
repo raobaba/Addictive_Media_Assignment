@@ -24,6 +24,7 @@ function Home() {
             <th>Phone</th>
             <th>Email</th>
             <th>Delete</th>
+            <th>See More</th>
           </tr>
         </thead>
         <tbody>
@@ -35,6 +36,7 @@ function Home() {
               <td>{item.phone}</td>
               <td>{item.email}</td>
               <td><button onClick={() => handleDelete(item.id)}>Delete</button></td>
+              <td><button>More</button></td>
             </tr>
           ))}
         </tbody>
