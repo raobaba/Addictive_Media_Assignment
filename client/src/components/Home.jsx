@@ -4,6 +4,8 @@ import '../styles/Home.css'; // Import CSS for styling
 function Home() {
   const [data, setData] = useState([
     { id: 1, firstName: 'John', lastName: 'Doe', dob: '1990-01-01', phone: '123-456-7890', email: 'john@example.com' },
+    { id: 2, firstName: 'Jane', lastName: 'Smith', dob: '1995-05-15', phone: '987-654-3210', email: 'jane@example.com' },
+    { id: 1, firstName: 'John', lastName: 'Doe', dob: '1990-01-01', phone: '123-456-7890', email: 'john@example.com' },
     { id: 2, firstName: 'Jane', lastName: 'Smith', dob: '1995-05-15', phone: '987-654-3210', email: 'jane@example.com' }
   ]);
 
